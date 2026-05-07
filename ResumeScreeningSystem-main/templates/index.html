@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Screening System</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            AI Resume Screener
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <h1>Smart AI Resume Screening System</h1>
+
+            <p>
+                Upload your resume and analyze skills,
+                ATS score, and category using AI.
+            </p>
+
+            <form action="/predict"
+                method="POST"
+                enctype="multipart/form-data">
+
+                <div class="upload-box">
+
+                    <input type="file"
+                        name="resume"
+                        required>
+
+                </div>
+
+                <button type="submit">
+                    Analyze Resume
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+        </div>
+
+    </section>
+
+
+    <section class="features" id="features">
+
+        <div class="card">
+
+            <h2>Resume Analysis</h2>
+
+            <p>
+                Analyze resumes quickly using AI.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>ATS Score</h2>
+
+            <p>
+                Generate smart resume score instantly.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Skill Detection</h2>
+
+            <p>
+                Detect technical skills automatically.
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

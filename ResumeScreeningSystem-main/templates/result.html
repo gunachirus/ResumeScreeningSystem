@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Result</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="result-container">
+
+        <h1>Resume Analysis Result</h1>
+
+
+        <div class="result-card">
+
+            <h2>Predicted Category</h2>
+
+            <p>{{ category }}</p>
+
+        </div>
+
+
+        <div class="result-card">
+
+            <h2>Resume Score</h2>
+
+            <p>{{ score }}%</p>
+
+        </div>
+
+
+        <div class="result-card">
+
+            <h2>Skills Found</h2>
+
+            <ul>
+
+                {% for skill in skills %}
+
+                <li>{{ skill }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+
+        <div class="result-card">
+
+            <h2>Suggestions</h2>
+
+            <ul>
+
+                {% for suggestion in suggestions %}
+
+                <li>{{ suggestion }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+
+        <a href="/">
+
+            <button>
+                Upload Another Resume
+            </button>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

@@ -25,7 +25,10 @@ skills_list = [
     'opencv',
     'mysql',
     'java',
-    'c++'
+    'c++',
+    'Gen Ai',
+    'LLMs',
+    'Powe Bi'
 ]
 
 
